@@ -1,8 +1,8 @@
-from app import app, WebhookHandler
-from linebot.exceptions import InvalidSignatureError
+from app import line_bot_api, handler
+from linebot.models import MessageEvent, TextMessage, TextSendMessage
 import random
 
-# Phoebe愛echo
+# Phoebe愛唱歌
 @handler.add(MessageEvent, message=TextMessage)
 def echo(event):
 	if event.source.userid != "Udeadbeefdeadbeefdeadbeefdeadbeef":
