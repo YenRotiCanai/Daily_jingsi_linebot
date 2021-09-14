@@ -1,4 +1,5 @@
 from app import app, handler
+from flask import Flask
 from linebot.exceptions import InvalidSignatureError
 
 # 接收 Line 平台送過來的"通知"
