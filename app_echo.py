@@ -2,6 +2,8 @@ from flask import Flask, request, abort
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 
+from linebot.models import MessageEvent, TextMessage, TextSendMessage
+
 app = Flask(__name__)
 
 # Line 聊天機器人基本資料
@@ -33,6 +35,7 @@ def echo(event):
 			event.reply_token,
 			TextSendMessage(text=event.message.text)
 		)
+
 
 if __name__ == "__main__":
 	app.run()
