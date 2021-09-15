@@ -9,7 +9,7 @@ def istock_isch(target):
 	target = urllib.parse.quote(target)
 
 	url = f'https://www.istockphoto.com/search/2/image?phrase={target}&sort=mostpopular'
-	headers = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:73.0 Gecko/20100101 Firefox/73.0'}
+	headers = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:73.0) Gecko/20100101 Firefox/73.0'}
 
 	req = urllib.request.Request(url, headers=headers)
 	page = urllib.request.urlopen(req).read()
