@@ -1,6 +1,12 @@
 from app import app, handler
-from flask import request
+from flask import request, render_template
 from linebot.exceptions import InvalidSignatureError
+
+
+@app.route("/")
+def home():
+	return render_template("home.html")
+
 
 # 接收 Line 平台送過來的"通知"
 @app.route("/callback", methods=['POST'])
