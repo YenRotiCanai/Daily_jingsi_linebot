@@ -22,12 +22,12 @@ def istock_isch(target):
 	return img_list[random.randint(0, len(img_list) -1)]
 
 # Phoebe愛唱歌
-def pretty_echo(event):
+def pretty_echo(text):
     
     pretty_note = '♫♪♬'
     pretty_text = ''
 
-    for i in event.message.text:
+    for i in text:
 
         pretty_text += i
         pretty_text += f" {random.choice(pretty_note)} "
