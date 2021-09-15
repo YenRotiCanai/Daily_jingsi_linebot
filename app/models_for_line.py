@@ -14,7 +14,7 @@ def istock_isch(target):
 	req = urllib.request.Request(url, headers=headers)
 	page = urllib.request.urlopen(req).read()
 
-	pattern = 'src="(https://media.*?"'
+	pattern = 'src="(https://media.*?)"'
 	img_list = []
 	for match in re.finditer(pattern, str(page,'utf-8')):
 		img_list.append(re.sub('amp;', '', match.group(1)))
