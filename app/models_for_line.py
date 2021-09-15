@@ -3,7 +3,7 @@ from linebot.models import MessageEvent, TextMessage, TextSendMessage, ImageSend
 
 import random
 import urllib
-import request
+import re
 
 def istock_isch(target):
 	target = urllib.parse.quote(target)
